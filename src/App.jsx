@@ -1,24 +1,59 @@
-import { useState } from "react";
-import "./App.scss";
-import Hero from "./components/Hero/Hero";
-import About from "./components/Hero/About/About";
-import Education from "./components/Hero/Education/Education";
-import Experience from "./components/Hero/Experience/Experience";
-import More from "./components/Hero/More/More";
+// import { useState } from "react";
+import "./App.css";
+import { Link, Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import { CV } from "./CV/CV";
+// import Footer from "./components/Footer/Footer";
 
-
-const { hero, education, experience, languages, habilities } = CV;
+const { hero, education, experience, languages, skills } = CV;
 
 function App() {
+  // const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className='App'>
-      <Hero hero={hero} />
-      <About hero={hero} />
-      <Education education={education} />
-      <Experience experience={experience} />
-      <More languages={languages} habilities={habilities} />
-    </div>
+    // <div className={'App' + (darkMode ? " oscuro" : " claro")}>
+
+    <Router>
+      <header>
+        <nav className='navbar'>
+          <ul className='menu'>
+            <li>
+              <Link to='/'>Inicio</Link>
+            </li>
+            <li>
+              <Link to='/about'>Acerca de</Link>
+            </li>
+            <li>
+              <Link to='/contact'>Contacto</Link>
+            </li>
+          </ul>
+        </nav>
+        {/* <button onClick={() => { setDarkMode(true) }}>Oscuro</button>
+          <button onClick={() => { setDarkMode(false) }}>Claro</button> */}
+      </header>
+
+      <main>
+        <Routes>
+          <Route path='/' element={<Home info={hero} />} />
+          <Route
+            path='/about'
+            element={
+              <About
+                education={education}
+                experience={experience}
+                langs={languages}
+                skills={skills}
+              />
+            }
+          />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </main>
+    </Router>
+  
+    /*   </div> */
   );
 }
 

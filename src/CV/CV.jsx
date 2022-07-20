@@ -1,11 +1,11 @@
 export const CV = {
   hero: {
     name: "Sara",
-    surnames: "Rodriguez Hernandez",
+    surnames: "Rodríguez Hernández",
+    profession: "Front End Developer",
     city: "Madrid",
     email: "rasahernan@hotmail.com",
     birthDate: "28/02/1995",
-    phone: "(+34) 123456789",
     gitHub: "https://github.com/Sariiituus",
     linkedin: "https://www.linkedin.com/in/sararodriguezhernandez/",
     aboutMe: [
@@ -25,14 +25,14 @@ export const CV = {
   },
   education: [
     {
-      name: "FP Grado Medio Cocina y Gastronomía",
-      date: "2014-1015",
-      where: "IES Maria de Zayas - Majadahonda, Madrid",
+      name: "Bootcamp Front End Developer",
+      date: "2022",
+      where: "Upgrade Hub - Madrid",
     },
     {
-      name: "Curso de Gestión y Marketing Gastronómico",
-      date: "2018 - 2019",
-      where: "CEF - Madrid",
+      name: "Agente de reservas de viajes",
+      date: "2020",
+      where: "Turiscenter - Madrid",
     },
     {
       name: "Máster Coach Nutriconal y técnico en Nutrición y Dietética",
@@ -40,15 +40,14 @@ export const CV = {
       where: "Madrid",
     },
     {
-      name: "Agente de reservas de viajes",
-      date: "2020",
-      where: "Turiscenter - Madrid",
+      name: "Curso de Gestión y Marketing Gastronómico",
+      date: "2018 - 2019",
+      where: "CEF - Madrid",
     },
-
     {
-      name: "Bootcamp Front End Developer",
-      date: "2022",
-      where: "Upgrade Hub - Madrid",
+      name: "FP Grado Medio Cocina y Gastronomía",
+      date: "2014-1015",
+      where: "IES Maria de Zayas - Majadahonda, Madrid",
     },
   ],
   experience: [
@@ -67,11 +66,17 @@ export const CV = {
         "Manage the company, which is a multi-billion dollar multinational corporation that develops and manufactures advanced weapon and defense technologies. The company manufactures the armor worn by Iron Man and War Machine.",
     },
   ],
-  languages: {
-    language: "Inglés e Italiano",
-    level: "Medio",
-  },
-  habilities: [
+  languages: [
+    {
+      language: "Inglés",
+      level: "Medio",
+    },
+    {
+      language: "Italiano",
+      level: "Medio",
+    },
+  ],
+  skills: [
     "HTML",
     "CSS3",
     "JavaScript",

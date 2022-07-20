@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* barra navegación */
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.navbar {
+  display: flex;
+  background-color: #104f55;
+  justify-content: flex-end;
+  padding: 2em;
+  align-items: center;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  width: 45%;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.menu a:hover {
+  background-color: #32746d;
+  color: #191c32;
+  transition: ease-in 0.4s;
+}
+
+/* Boton oscuro y claro */
+
+/* 
+.claro {
+  background-color: beige;
+  color: black;
+}
+
+.oscuro {
+  background-color: gray;
+  color: white;
+} */

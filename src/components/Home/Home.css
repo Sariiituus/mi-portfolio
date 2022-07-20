@@ -1,0 +1,49 @@
+.main {
+  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+a {
+  color: black;
+  display: flex;
+  cursor: pointer;
+}
+
+
+.dowload-cv {
+  padding: 10px 20px;
+  background-color: #104f55;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
+  color: white;
+}
+
+.dowload-cv:hover {
+  background-color: #32746d;
+  box-shadow: none;
+}
+
+.img-perfil {
+  border: 7px solid black;
+  height: 350px;
+  margin-left: 200px;
+}
+
+a {
+  text-decoration: none;
+}
