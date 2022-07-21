@@ -1,19 +1,20 @@
-// import { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { Link, Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import { CV } from "./CV/CV";
+
 // import Footer from "./components/Footer/Footer";
 
 const { hero, education, experience, languages, skills } = CV;
 
 function App() {
-  // const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    // <div className={'App' + (darkMode ? " oscuro" : " claro")}>
+  <div className={'App' + (darkMode ? " oscuro" : " claro")}>
 
     <Router>
       <header>
@@ -30,8 +31,10 @@ function App() {
             </li>
           </ul>
         </nav>
-        {/* <button onClick={() => { setDarkMode(true) }}>Oscuro</button>
-          <button onClick={() => { setDarkMode(false) }}>Claro</button> */}
+        <div className="btn">
+        <button onClick={() => { setDarkMode(true) }}>🌙</button>
+        <button onClick={() => { setDarkMode(false) }}>🌞</button> 
+        </div>
       </header>
 
       <main>
@@ -53,7 +56,7 @@ function App() {
       </main>
     </Router>
   
-    /*   </div> */
+  </div> 
   );
 }
 
