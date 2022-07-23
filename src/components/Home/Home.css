@@ -1,27 +1,57 @@
 .main {
-  margin: auto;
-  margin-top: 80px;
-  width: 80vw;
-  height: 80vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  padding-top: 6em;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img-perfil {
+  width: 70%;
+}
+
+.profile-picture {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
   align-items: center;
 }
 
-h1 {
-  font-size: 3em;
+.github {
+  width: 64px;
+  height: 64px;
 }
 
-p {
-  font-size: 1.2em;
+.linkedin {
+  width: 64px;
+  height: 64px;
 }
+
+.icon-linkedin {
+  width: 64px;
+  height: 64px;
+}
+
+.icon-github {
+  width: 64px;
+  height: 64px;
+}
+
 
 .dowload-cv {
   padding: 10px 20px;
   background-color: #104f55;
   border: none;
   border-radius: 20px;
-  margin-top: 10px;
+  margin-top: 30px;
   cursor: pointer;
   box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
   color: white;
@@ -30,31 +60,22 @@ p {
 .dowload-cv:hover {
   background-color: #32746d;
   box-shadow: none;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: (2, 1fr);
-}
-
-.img-perfil {
-  height: 350px;
-  margin-left: 200px;
+  
 }
 
 .social-network {
   display: flex;
   justify-content: space-evenly;
-  width: 300px;
-  margin-top: 1em;
+  width: 100%;
+  margin-top: 2em;
 }
 
-.icon-linkedin {
-  width: 15%;
-  margin-top: 20px;
+.container-btn-download {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
 }
 
-.icon-github {
-  width: 15%;
-  margin-top: 20px;
+h1, h2 {
+  margin-block-end: 0;
 }

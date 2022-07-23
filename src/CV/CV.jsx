@@ -55,18 +55,18 @@ export const CV = {
       name: "Consultant",
       date: "01/01/2013 – Nowadays",
       where: "S.H.I.E.L.D",
-      description:
-        "It builds the helicarriers used by S.H.I.E.L.D. It produces the Quinjets used by the Avengers.",
     },
     {
       name: "CEO",
       date: "01/01/2000 – 28/02/2012",
       where: "Stark Industries",
-      description:
-        "Manage the company, which is a multi-billion dollar multinational corporation that develops and manufactures advanced weapon and defense technologies. The company manufactures the armor worn by Iron Man and War Machine.",
     },
   ],
   languages: [
+    {
+      language: "Español",
+      level: "Nativo",
+    },
     {
       language: "Inglés",
       level: "Medio",
@@ -77,13 +77,13 @@ export const CV = {
     },
   ],
   skills: [
-    "HTML",
-    "CSS3",
-    "JavaScript",
-    "Angular",
-    "React",
-    "Git",
-    "Trabajo en equipo",
-    "Aptitudes de organización",
+    "- HTML",
+    "- CSS3",
+    "- JavaScript",
+    "- Angular",
+    "- React",
+    "- Git",
+    "- Trabajo en equipo",
+    "- Aptitudes de organización",
   ],
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { Link, Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import Home from "./components/Home/Home";
@@ -13,50 +13,72 @@ const { hero, education, experience, languages, skills } = CV;
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.querySelector("html").removeAttribute("data-theme");
+      document.querySelector("html").setAttribute("data-theme", "dark");
+    } else {
+      document.querySelector("html").removeAttribute("data-theme");
+      document.querySelector("html").setAttribute("data-theme", "light");
+    }
+  }, [darkMode]);
+
   return (
-  <div className={'App' + (darkMode ? " oscuro" : " claro")}>
+    <div className='App'>
+      <Router>
+        <header>
+          <nav className='navbar'>
+            <ul className='menu'>
+              <li>
+                <Link to='/'>Inicio</Link>
+              </li>
+              <li>
+                <Link to='/about'>Acerca de</Link>
+              </li>
+              <li>
+                <Link to='/contact'>Contacto</Link>
+              </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      setDarkMode(true);
+                    }}
+                  >
+                    🌙
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      setDarkMode(false);
+                    }}
+                  >
+                    🌞
+                  </button>
+                </li>
+            </ul>
+          </nav>
+        </header>
 
-    <Router>
-      <header>
-        <nav className='navbar'>
-          <ul className='menu'>
-            <li>
-              <Link to='/'>Inicio</Link>
-            </li>
-            <li>
-              <Link to='/about'>Acerca de</Link>
-            </li>
-            <li>
-              <Link to='/contact'>Contacto</Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="btn">
-        <button onClick={() => { setDarkMode(true) }}>🌙</button>
-        <button onClick={() => { setDarkMode(false) }}>🌞</button> 
-        </div>
-      </header>
-
-      <main>
-        <Routes>
-          <Route path='/' element={<Home info={hero} />} />
-          <Route
-            path='/about'
-            element={
-              <About
-                education={education}
-                experience={experience}
-                langs={languages}
-                skills={skills}
-              />
-            }
-          />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
-      </main>
-    </Router>
-  
-  </div> 
+        <main className='container'>
+          <Routes>
+            <Route path='/' element={<Home info={hero} />} />
+            <Route
+              path='/about'
+              element={
+                <About
+                  education={education}
+                  experience={experience}
+                  langs={languages}
+                  skills={skills}
+                />
+              }
+            />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+        </main>
+      </Router>
+    </div>
   );
 }
 

@@ -8,7 +8,6 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
-/* barra navegación */
 
 header {
   display: flex;
@@ -20,14 +19,13 @@ header {
   display: flex;
   background-color: #104f55;
   justify-content: flex-end;
-  padding: 2em;
+  padding: 0.5em;
   align-items: center;
   width: 100%;
 }
 
 .menu {
   display: flex;
-  width: 45%;
   justify-content: space-around;
   text-transform: uppercase;
 }
@@ -48,22 +46,6 @@ header {
   transition: ease-in 0.4s;
 }
 
-/* Boton oscuro y claro */
 
-.btn {
-  display: flex;
-  justify-content: center;
 
-}
 
-.claro {
-  background-color: white;
-  color: black;
-
-}
-
-.oscuro {
-  background-color: rgb(65, 65, 65);
-  color: white;
-  
-}  
