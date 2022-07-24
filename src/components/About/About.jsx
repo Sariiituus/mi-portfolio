@@ -7,32 +7,18 @@ const About = (props) => {
   return (
     <div className='cointainer-principal'>
       <article>
-        <header>Educación</header>
+        <header>Skills</header>
         <table>
-          <thead>
-            <tr>
-              <th scope='col'>Fecha</th>
-              <th scope='col'>Título</th>
-              <th scope='col'>Lugar</th>
-            </tr>
-          </thead>
           <tbody>
-            {education.map((item) => {
-              return (
-                <tr key={item}>
-                  <td>{item.date}</td>
-                  <td>{item.name}</td>
-                  <td>{item.where}</td>
-                </tr>
-              );
+            {skills.map((skill) => {
+              return <tr key={skill}>{skill}</tr>;
             })}
           </tbody>
         </table>
       </article>
-
       <div>
         <article>
-          <header>Experiencia</header>
+          <header>Educación</header>
           <table>
             <thead>
               <tr>
@@ -42,12 +28,36 @@ const About = (props) => {
               </tr>
             </thead>
             <tbody>
-              {experience.map((item) => {
+              {education.map((item) => {
                 return (
                   <tr key={item}>
                     <td>{item.date}</td>
                     <td>{item.name}</td>
                     <td>{item.where}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </article>
+      </div>
+
+      <div>
+        <article>
+          <header>Experiencia</header>
+          <table>
+            <thead>
+              <tr>
+                <th scope='col'>Fecha</th>
+                <th scope='col'>Título</th>
+              </tr>
+            </thead>
+            <tbody>
+              {experience.map((item) => {
+                return (
+                  <tr key={item}>
+                    <td>{item.date}</td>
+                    <td>{item.name}</td>
                   </tr>
                 );
               })}
@@ -78,19 +88,6 @@ const About = (props) => {
             </tbody>
           </table>
         </article>
-
-        <div>
-          <article>
-            <header>Skills</header>
-            <table>
-              <tbody>
-                {skills.map((skill) => {
-                  return <tr key={skill}>{skill}</tr>;
-                })}
-              </tbody>
-            </table>
-          </article>
-        </div>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ function App() {
                 <Link to='/'>Inicio</Link>
               </li>
               <li>
-                <Link to='/about'>Acerca de</Link>
+                <Link to='/about'>Sobre mi</Link>
               </li>
               <li>
                 <Link to='/contact'>Contacto</Link>

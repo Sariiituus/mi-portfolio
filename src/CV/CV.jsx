@@ -3,9 +3,6 @@ export const CV = {
     name: "Sara",
     surnames: "Rodríguez Hernández",
     profession: "Front End Developer",
-    city: "Madrid",
-    email: "rasahernan@hotmail.com",
-    birthDate: "28/02/1995",
     gitHub: "https://github.com/Sariiituus",
     linkedin: "https://www.linkedin.com/in/sararodriguezhernandez/",
     aboutMe: [
@@ -52,14 +49,12 @@ export const CV = {
   ],
   experience: [
     {
-      name: "Consultant",
-      date: "01/01/2013 – Nowadays",
-      where: "S.H.I.E.L.D",
+      name: "Jefa de cocina y encargada",
+      date: "Mayo 2017 - Mayo 2022",
     },
     {
-      name: "CEO",
-      date: "01/01/2000 – 28/02/2012",
-      where: "Stark Industries",
+      name: "Cocinera",
+      date: "Diciembre 2016 - Agosto 2021"
     },
   ],
   languages: [
